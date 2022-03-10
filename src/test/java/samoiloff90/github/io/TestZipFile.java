@@ -11,13 +11,13 @@ import java.util.zip.ZipFile;
 import static com.codeborne.pdftest.assertj.Assertions.assertThat;
 import com.opencsv.CSVReader;
 import java.util.List;
-import static samoiloff90.github.io.parametrs.ForZipFiles.*;
+import static samoiloff90.github.io.parametrs.TestData.*;
 
 public class TestZipFile {
 
     @Test
     public void fromFile() throws Exception {
-        ZipFile zipFile = new ZipFile(pathFile);
+        ZipFile zipFile = new ZipFile(pathFileZip);
         Enumeration<? extends ZipEntry> entries = zipFile.entries();
         while (entries.hasMoreElements()) {
             ZipEntry entry = entries.nextElement();
