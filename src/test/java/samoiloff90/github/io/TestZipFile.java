@@ -17,7 +17,6 @@ public class TestZipFile {
 
     @Test
     public void fromFile() throws Exception {
-        String pathFile = "src/test/resources/test.zip";
         ZipFile zipFile = new ZipFile(pathFile);
         Enumeration<? extends ZipEntry> entries = zipFile.entries();
         while (entries.hasMoreElements()) {
